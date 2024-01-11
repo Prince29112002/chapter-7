@@ -1,24 +1,33 @@
-import logo from './logo.svg';
 import './App.css';
+import ExampleComponent from './Taska/ExampleComponent';
+import MouseTracker from './Taskb/MouseTracker';
+import Content from './Taskc/Content';
+import Model2 from './Taskd/Model2';
+import Index from './Taskf/Index';
+import ForwardRef from './Taskg/ForwardRef';
+// import Errormsg from './Taske/Errormsg';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <ExampleComponent />
+    <h1>Mouse Tracker</h1>
+    <MouseTracker
+    render={(position) => (
+      <div>
+        <p>Mouse X: {position.x}</p>
+        <p>Mouse Y: {position.y}</p>
+      </div>
+    )}
+    />
+    <Content />
+    <Model2 />
+    {/* <Errormsg /> */}
+    <Index />
+    <ForwardRef />
+
+    </>
   );
 }
 
